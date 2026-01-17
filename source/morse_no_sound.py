@@ -1,5 +1,5 @@
 from colorama import Fore,Style # type: ignore
-from source.assests.dict import morse_letters,morse_dict
+from source.assets.dict import morse_letters,morse_dict
 def translate(text):
     """Convert text to Morse code."""
     text = text.lower()

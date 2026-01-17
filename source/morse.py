@@ -1,6 +1,6 @@
 from colorama import Fore,Style # type: ignore
-from source.assests.dict import morse_letters,morse_dict
-from source.assests.play_morse import play_morse
+from source.assets.dict import morse_letters,morse_dict
+from source.assets.play_morse import play_morse
 def translate(text):
     """Convert text to Morse code."""
     text = text.lower()
@@ -19,12 +19,12 @@ def morse_to_text(morse_code):
     return " ".join(decoded_text)
 
 while True:
-    choice = input("Type 'morse' to convert text to Morse code, or 'text' to convert Morse code to text: ").strip().lower()
+    choice = input("Typ 'morse' to convert text to Morse code, or 'text' to convert Morse code to text: ").strip().lower()
     if choice == "morse":
         word_to_morse = input("Enter a phrase (only letters and numbers, spaces allowed): ").strip()
         morse_phrase = translate(word_to_morse)
         print(Fore.YELLOW+f"Your Morse code: {morse_phrase}"+Style.RESET_ALL)
-        sound_put=input("If you would like to here the audio for the output type yes, else, type anything else")
+        sound_put=input("If you would like to here the audio for the output type yes, else, type anything else ")
 
         if sound_put=="yes":
             play_again=True
